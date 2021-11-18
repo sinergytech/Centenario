@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="bb91db52-d8f8-4108-bfca-ad4a9f228eb1" 
+        solutionId="bb91db52-d8f8-4108-bfca-ad4a9f228eb1" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Centenario.Comisiones.Aprobaciones"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="dca2411b-c3ce-4e00-b911-a2e3e9c8b5a8" />
+  </features>
+</package>

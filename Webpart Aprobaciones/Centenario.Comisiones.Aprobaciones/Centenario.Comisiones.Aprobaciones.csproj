@@ -1,0 +1,463 @@
+﻿<Project ToolsVersion="16.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8BCE525-7540-4B08-A16B-B23514C790B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Centenario.Comisiones.Aprobaciones</RootNamespace>
+    <AssemblyName>Centenario.Comisiones.Aprobaciones</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{f11c3044-2f7d-4794-a283-63750976eeda}</AppFeaturePartId>
+    <WspPartId>{b0fee13d-b5ff-47aa-a81a-4fdd82878125}</WspPartId>
+    <WorkflowPartId>{998b02e5-6f02-42f1-9cc6-284048004f6e}</WorkflowPartId>
+    <CspkgPartId>{0558fc67-6233-4034-b7f9-e59256bd5475}</CspkgPartId>
+    <SqlPackagePartId>{5f398c01-73be-4197-ac1b-ff21037fc15f}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ClientWebparts\CDU\AprobacionCDU\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="ClientWebparts\CDU\SolicitarAprobacion\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="ClientWebparts\Cobranzas\AprobacionCC\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="ClientWebparts\Cobranzas\SolicitarAprobacionCC\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="ClientWebparts\Rentas\AprobacionRentas\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="ClientWebparts\Rentas\SolicitarAprobacionRentas\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Content\css\oneui.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\style_home.css" />
+    <Content Include="Content\css\themes\amethyst.min.css" />
+    <Content Include="Content\css\themes\city.min.css" />
+    <Content Include="Content\css\themes\flat.min.css" />
+    <Content Include="Content\css\themes\modern.min.css" />
+    <Content Include="Content\css\themes\smooth.min.css" />
+    <Content Include="Content\css\widgets.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\img\avatars\avatar1.jpg" />
+    <Content Include="Content\img\avatars\avatar10.jpg" />
+    <Content Include="Content\img\avatars\avatar11.jpg" />
+    <Content Include="Content\img\avatars\avatar12.jpg" />
+    <Content Include="Content\img\avatars\avatar13.jpg" />
+    <Content Include="Content\img\avatars\avatar14.jpg" />
+    <Content Include="Content\img\avatars\avatar15.jpg" />
+    <Content Include="Content\img\avatars\avatar16.jpg" />
+    <Content Include="Content\img\avatars\avatar2.jpg" />
+    <Content Include="Content\img\avatars\avatar3.jpg" />
+    <Content Include="Content\img\avatars\avatar4.jpg" />
+    <Content Include="Content\img\avatars\avatar5.jpg" />
+    <Content Include="Content\img\avatars\avatar6.jpg" />
+    <Content Include="Content\img\avatars\avatar7.jpg" />
+    <Content Include="Content\img\avatars\avatar8.jpg" />
+    <Content Include="Content\img\avatars\avatar9.jpg" />
+    <Content Include="Content\img\avatars\readme.txt" />
+    <Content Include="Content\img\favicons\apple-touch-icon-114x114.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-120x120.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-144x144.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-152x152.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-180x180.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-57x57.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-60x60.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-72x72.png" />
+    <Content Include="Content\img\favicons\apple-touch-icon-76x76.png" />
+    <Content Include="Content\img\favicons\favicon-160x160.png" />
+    <Content Include="Content\img\favicons\favicon-16x16.png" />
+    <Content Include="Content\img\favicons\favicon-192x192.png" />
+    <Content Include="Content\img\favicons\favicon-32x32.png" />
+    <Content Include="Content\img\favicons\favicon-96x96.png" />
+    <Content Include="Content\img\favicons\favicon.png" />
+    <Content Include="Content\img\logo-menu.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\photos\photo1.jpg" />
+    <Content Include="Content\img\photos\photo10.jpg" />
+    <Content Include="Content\img\photos\photo11.jpg" />
+    <Content Include="Content\img\photos\photo12.jpg" />
+    <Content Include="Content\img\photos\photo13.jpg" />
+    <Content Include="Content\img\photos\photo14.jpg" />
+    <Content Include="Content\img\photos\photo15.jpg" />
+    <Content Include="Content\img\photos\photo16.jpg" />
+    <Content Include="Content\img\photos\photo17.jpg" />
+    <Content Include="Content\img\photos\photo18.jpg" />
+    <Content Include="Content\img\photos\photo19.jpg" />
+    <Content Include="Content\img\photos\photo2.jpg" />
+    <Content Include="Content\img\photos\photo20.jpg" />
+    <Content Include="Content\img\photos\photo3.jpg" />
+    <Content Include="Content\img\photos\photo4.jpg" />
+    <Content Include="Content\img\photos\photo5.jpg" />
+    <Content Include="Content\img\photos\photo6.jpg" />
+    <Content Include="Content\img\photos\photo7.jpg" />
+    <Content Include="Content\img\photos\photo8.jpg" />
+    <Content Include="Content\img\photos\photo9.jpg" />
+    <Content Include="Content\img\select.png" />
+    <Content Include="Content\img\sistema.png" />
+    <Content Include="Content\img\titulo.png" />
+    <Content Include="Content\img\user-icon.png" />
+    <Content Include="Content\img\various\hero1.jpg" />
+    <Content Include="Content\img\various\little-monster.png" />
+    <Content Include="Content\img\various\promo1.jpg" />
+    <Content Include="Content\img\various\promo2.jpg" />
+    <Content Include="Content\img\various\promo3.jpg" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jqueryui\css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\jqueryui\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\jqueryui\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jqueryui\css\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\jqueryui\css\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\jqueryui\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jqueryui\css\jquery-ui.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.accordion.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.all.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.autocomplete.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.base.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.button.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.core.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.datepicker.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.dialog.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.progressbar.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.resizable.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.selectable.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.slider.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.tabs.css" />
+    <Content Include="Content\jqueryui\css\jquery.ui.theme.css" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\jqueryui\css\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\jqueryui\css\minified\jquery-ui.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\jqueryui\css\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\jqueryui\js\jquery-ui.js" />
+    <Content Include="Content\jqueryui\js\jquery-ui.min.js" />
+    <Content Include="Content\js\app.js" />
+    <Content Include="Content\js\bootstrapsweetalert\sweetalert2.css" />
+    <Content Include="Content\js\bootstrapsweetalert\sweetalert2.js" />
+    <Content Include="Content\js\core\bootstrap.min.js" />
+    <Content Include="Content\js\core\jquery.appear.min.js" />
+    <Content Include="Content\js\core\jquery.countTo.min.js" />
+    <Content Include="Content\js\core\jquery.min.js" />
+    <Content Include="Content\js\core\jquery.placeholder.min.js" />
+    <Content Include="Content\js\core\jquery.scrollLock.min.js" />
+    <Content Include="Content\js\core\jquery.slimscroll.min.js" />
+    <Content Include="Content\js\core\js.cookie.min.js" />
+    <Content Include="Content\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\js\jquery.form.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.treetable.js" />
+    <Content Include="Content\js\jqueryanimations.js" />
+    <Content Include="Content\js\modernizr-2.6.2.js" />
+    <Content Include="Content\js\navegacion.js" />
+    <Content Include="Content\js\numeric.js" />
+    <Content Include="Content\js\pages\base_comp_animations.js" />
+    <Content Include="Content\js\pages\base_comp_calendar.js" />
+    <Content Include="Content\js\pages\base_comp_charts.js" />
+    <Content Include="Content\js\pages\base_comp_maps.js" />
+    <Content Include="Content\js\pages\base_forms_validation.js" />
+    <Content Include="Content\js\pages\base_forms_wizard.js" />
+    <Content Include="Content\js\pages\base_pages_coming_soon.js" />
+    <Content Include="Content\js\pages\base_pages_dashboard.js" />
+    <Content Include="Content\js\pages\base_pages_lock.js" />
+    <Content Include="Content\js\pages\base_pages_login.js" />
+    <Content Include="Content\js\pages\base_pages_register.js" />
+    <Content Include="Content\js\pages\base_pages_reminder.js" />
+    <Content Include="Content\js\pages\base_tables_datatables.js" />
+    <Content Include="Content\js\pages\base_ui_activity.js" />
+    <Content Include="Content\js\pages\base_ui_icons.js" />
+    <Content Include="Content\js\pages\base_ui_widgets.js" />
+    <Content Include="Content\js\pages\frontend_contact.js" />
+    <Content Include="Content\js\pages\frontend_features.js" />
+    <Content Include="Content\js\plugins\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\js\plugins\bootstrap-datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\js\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="Content\js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Content\js\plugins\dropzonejs\dropzone.min.css" />
+    <Content Include="Content\js\plugins\dropzonejs\dropzone.min.js" />
+    <Content Include="Content\js\plugins\easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="Content\js\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Content\js\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\js\plugins\fullcalendar\gcal.min.js" />
+    <Content Include="Content\js\plugins\fullcalendar\moment.min.js" />
+    <Content Include="Content\js\plugins\gmapsjs\gmaps.min.js" />
+    <Content Include="Content\js\plugins\highlightjs\github-gist.min.css" />
+    <Content Include="Content\js\plugins\highlightjs\highlight.pack.js" />
+    <Content Include="Content\js\plugins\jquery-countdown\jquery.countdown.min.js" />
+    <Content Include="Content\js\plugins\jquery-tags-input\jquery.tagsinput.min.css" />
+    <Content Include="Content\js\plugins\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="Content\js\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\js\plugins\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Content\js\plugins\magnific-popup\magnific-popup.min.css" />
+    <Content Include="Content\js\plugins\magnific-popup\magnific-popup.min.js" />
+    <Content Include="Content\js\plugins\masked-inputs\jquery.maskedinput.min.js" />
+    <Content Include="Content\js\plugins\select2\select2-bootstrap.css" />
+    <Content Include="Content\js\plugins\select2\select2.full.min.js" />
+    <Content Include="Content\js\plugins\select2\select2.min.css" />
+    <Content Include="Content\js\plugins\slick\ajax-loader.gif" />
+    <Content Include="Content\js\plugins\slick\fonts\slick.svg" />
+    <Content Include="Content\js\plugins\slick\slick-theme.min.css" />
+    <Content Include="Content\js\plugins\slick\slick.min.css" />
+    <Content Include="Content\js\plugins\slick\slick.min.js" />
+    <Content Include="Content\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\js\plugins\summernote\summernote-bs3.min.css" />
+    <Content Include="Content\js\plugins\summernote\summernote.min.css" />
+    <Content Include="Content\js\plugins\summernote\summernote.min.js" />
+    <Content Include="Content\js\tableExport.js" />
+    <Content Include="Content\js\treeview.js" />
+    <Content Include="Content\table\bootstrap-table-contextmenu.js" />
+    <Content Include="Content\table\bootstrap-table.css" />
+    <Content Include="Content\table\bootstrap-table.js" />
+    <Content Include="Content\table\extensions\accent-neutralise\bootstrap-table-accent-neutralise.js" />
+    <Content Include="Content\table\extensions\angular\bootstrap-table-angular.js" />
+    <Content Include="Content\table\extensions\cookie\bootstrap-table-cookie.js" />
+    <Content Include="Content\table\extensions\editable\bootstrap-table-editable.js" />
+    <Content Include="Content\table\extensions\export\bootstrap-table-export.js" />
+    <Content Include="Content\table\extensions\filter-control\bootstrap-table-filter-control.js" />
+    <Content Include="Content\table\extensions\filter\bootstrap-table-filter.js" />
+    <Content Include="Content\table\extensions\flat-json\bootstrap-table-flat-json.js" />
+    <Content Include="Content\table\extensions\group-by-v2\bootstrap-table-group-by.css" />
+    <Content Include="Content\table\extensions\group-by-v2\bootstrap-table-group-by.js" />
+    <Content Include="Content\table\extensions\group-by\bootstrap-table-group-by.css" />
+    <Content Include="Content\table\extensions\group-by\bootstrap-table-group-by.js" />
+    <Content Include="Content\table\extensions\key-events\bootstrap-table-key-events.js" />
+    <Content Include="Content\table\extensions\mobile\bootstrap-table-mobile.js" />
+    <Content Include="Content\table\extensions\multiple-search\bootstrap-table-multiple-search.js" />
+    <Content Include="Content\table\extensions\multiple-sort\bootstrap-table-multiple-sort.js" />
+    <Content Include="Content\table\extensions\natural-sorting\bootstrap-table-natural-sorting.js" />
+    <Content Include="Content\table\extensions\reorder-columns\bootstrap-table-reorder-columns.js" />
+    <Content Include="Content\table\extensions\reorder-rows\bootstrap-table-reorder-rows.css" />
+    <Content Include="Content\table\extensions\reorder-rows\bootstrap-table-reorder-rows.js" />
+    <Content Include="Content\table\extensions\resizable\bootstrap-table-resizable.js" />
+    <Content Include="Content\table\extensions\sticky-header\bootstrap-table-sticky-header.css" />
+    <Content Include="Content\table\extensions\sticky-header\bootstrap-table-sticky-header.js" />
+    <Content Include="Content\table\extensions\toolbar\bootstrap-table-toolbar.js" />
+    <Content Include="Content\table\locale\bootstrap-table-es-ES.js" />
+    <Content Include="Pages\AprobacionCC.aspx" />
+    <Content Include="Pages\AprobacionCDU.aspx" />
+    <Content Include="Pages\AprobacionRentas.aspx" />
+    <Content Include="Pages\SolicitarAprobacionCC.aspx" />
+    <Content Include="Pages\SolicitarAprobacionCDU.aspx" />
+    <Content Include="Pages\SolicitarAprobacionRentas.aspx" />
+    <Content Include="Scripts\Comun\AlertJS.js" />
+    <Content Include="Scripts\Comun\app.js" />
+    <Content Include="Scripts\Comun\arrow.fabric.js" />
+    <Content Include="Scripts\Comun\cookie.js" />
+    <Content Include="Scripts\Comun\custom-script.js" />
+    <Content Include="Scripts\Comun\custom-script.min.js" />
+    <Content Include="Scripts\Comun\flatpickr.js" />
+    <Content Include="Scripts\Comun\jquery.mark.js" />
+    <Content Include="Scripts\Comun\jquery.mask.js" />
+    <Content Include="Scripts\Comun\materialize.js" />
+    <Content Include="Scripts\Comun\materialize.min.js" />
+    <Content Include="Scripts\Comun\moment.js" />
+    <Content Include="Scripts\Comun\numeric.js" />
+    <Content Include="Scripts\Comun\pdfannotate.js" />
+    <Content Include="Scripts\Comun\plugins.js" />
+    <Content Include="Scripts\Comun\plugins.min.js" />
+    <Content Include="Scripts\Comun\ResizeAppPart.js" />
+    <Content Include="Scripts\Comun\spcontext.js" />
+    <Content Include="Scripts\Comun\tableExport.js" />
+    <Content Include="Scripts\Comun\Utils.js" />
+    <Content Include="Scripts\Pages\AprobacionCC.js" />
+    <Content Include="Scripts\Pages\AprobacionCDU.js" />
+    <Content Include="Scripts\Pages\AprobacionRentas.js" />
+    <Content Include="Scripts\Pages\SolicitarAprobacionCC.js" />
+    <Content Include="Scripts\Pages\SolicitarAprobacionCDU.js" />
+    <Content Include="Scripts\Pages\SolicitarAprobacionRentas.js" />
+    <Content Include="Scripts\Pages\SPOHelper.js" />
+    <Content Include="Scripts\Pages\Utils.js" />
+    <Content Include="Scripts\vendor\bootstrap-select\bootstrap-multiselect.css" />
+    <Content Include="Scripts\vendor\bootstrap-select\bootstrap-multiselect.js" />
+    <Content Include="Scripts\vendor\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Scripts\vendor\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Scripts\vendor\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\vendor\colorbox\jquery.colorbox-min.js" />
+    <Content Include="Scripts\vendor\core.js" />
+    <Content Include="Scripts\vendor\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\vendor\jquery-dateFormat.js" />
+    <Content Include="Scripts\vendor\jqueryui\jquery-ui.js" />
+    <Content Include="Scripts\vendor\jqueryui\jquery-ui.min.js" />
+    <Content Include="Scripts\vendor\moment.js" />
+    <Content Include="Scripts\vendor\numeric.js" />
+    <Content Include="Scripts\vendor\ResizeAppPart.js" />
+    <Content Include="Scripts\vendor\slick\slick.min.js" />
+    <None Include="ClientWebparts\CDU\AprobacionCDU\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ed172157-58e3-419a-ba4a-981e5b09d824}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebparts\CDU\SolicitarAprobacion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{539f25a7-ba06-47dc-bec5-7c60f2ccdcfb}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebparts\Cobranzas\AprobacionCC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dce68f78-4f00-469b-ac1c-2a041df4cdc3}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebparts\Cobranzas\SolicitarAprobacionCC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{83a2be83-4d8d-490d-8cb1-385514389a55}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebparts\Rentas\AprobacionRentas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{14abd9f8-6f08-4fb1-8866-28db41066477}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebparts\Rentas\SolicitarAprobacionRentas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{19166342-b178-4901-86be-e07ec5716944}</SharePointProjectItemId>
+    </None>
+    <None Include="Content\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Content\fonts\Simple-Line-Icons.eot" />
+    <None Include="Content\fonts\Simple-Line-Icons.ttf" />
+    <None Include="Content\fonts\Simple-Line-Icons.woff" />
+    <None Include="Content\js\plugins\slick\fonts\slick.eot" />
+    <None Include="Content\js\plugins\slick\fonts\slick.ttf" />
+    <None Include="Content\js\plugins\slick\fonts\slick.woff" />
+    <None Include="Content\less\main.less" />
+    <None Include="Content\less\mixins.less" />
+    <None Include="Content\less\modules\base.bootstrap-overwrite.less" />
+    <None Include="Content\less\modules\base.bootstrap.less" />
+    <None Include="Content\less\modules\extend.animations.less" />
+    <None Include="Content\less\modules\extend.plugins.less" />
+    <None Include="Content\less\modules\icons.fontawesome.less" />
+    <None Include="Content\less\modules\icons.simplelineicons.less" />
+    <None Include="Content\less\modules\oneui.blocks.less" />
+    <None Include="Content\less\modules\oneui.forms.less" />
+    <None Include="Content\less\modules\oneui.images.less" />
+    <None Include="Content\less\modules\oneui.layout.less" />
+    <None Include="Content\less\modules\oneui.lists.less" />
+    <None Include="Content\less\modules\oneui.navigation.less" />
+    <None Include="Content\less\modules\oneui.print.less" />
+    <None Include="Content\less\modules\oneui.themes.less" />
+    <None Include="Content\less\modules\oneui.utilities.less" />
+    <None Include="Content\less\themes\amethyst.less" />
+    <None Include="Content\less\themes\city.less" />
+    <None Include="Content\less\themes\flat.less" />
+    <None Include="Content\less\themes\modern.less" />
+    <None Include="Content\less\themes\smooth.less" />
+    <None Include="Content\less\variables.less" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{392a1d8b-8e92-453c-a42a-cd07878c50ef}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5f398c01-73be-4197-ac1b-ff21037fc15f}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0cc56ecb-9c92-4dab-84d8-e2fb170195b9}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8dccf455-8192-43fb-bce7-50d7d445ae61}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{bb91db52-d8f8-4108-bfca-ad4a9f228eb1}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{dca2411b-c3ce-4e00-b911-a2e3e9c8b5a8}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

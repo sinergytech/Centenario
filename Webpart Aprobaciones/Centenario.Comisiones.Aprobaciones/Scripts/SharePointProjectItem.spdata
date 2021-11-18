@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Scripts\" Type="ElementManifest" />
+    <ProjectItemFile Source="App.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\AlertJS.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\app.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\arrow.fabric.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\cookie.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\custom-script.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\custom-script.min.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\flatpickr.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\jquery.mark.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\jquery.mask.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\materialize.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\materialize.min.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\moment.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\numeric.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\pdfannotate.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\plugins.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\plugins.min.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\ResizeAppPart.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\spcontext.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\tableExport.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Comun\Utils.js" Target="Scripts\Comun\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\SolicitarAprobacionCDU.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\SPOHelper.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\Utils.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\core.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\jquery-3.2.1.min.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\jquery-dateFormat.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\moment.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\numeric.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\ResizeAppPart.js" Target="Scripts\vendor\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\bootstrap\bootstrap.bundle.min.js" Target="Scripts\vendor\bootstrap\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\bootstrap-select\bootstrap-multiselect.css" Target="Scripts\vendor\bootstrap-select\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\bootstrap-select\bootstrap-multiselect.js" Target="Scripts\vendor\bootstrap-select\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\bootstrap-select\bootstrap-select.css" Target="Scripts\vendor\bootstrap-select\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\bootstrap-select\bootstrap-select.js" Target="Scripts\vendor\bootstrap-select\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\colorbox\jquery.colorbox-min.js" Target="Scripts\vendor\colorbox\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\jqueryui\jquery-ui.js" Target="Scripts\vendor\jqueryui\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\jqueryui\jquery-ui.min.js" Target="Scripts\vendor\jqueryui\" Type="ElementFile" />
+    <ProjectItemFile Source="vendor\slick\slick.min.js" Target="Scripts\vendor\slick\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\SolicitarAprobacionRentas.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\AprobacionCDU.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\AprobacionRentas.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\AprobacionCC.js" Target="Scripts\Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="Pages\SolicitarAprobacionCC.js" Target="Scripts\Pages\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

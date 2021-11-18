@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="bb91db52-d8f8-4108-bfca-ad4a9f228eb1" SharePointProductVersion="16.0">
+  <FeatureManifests>
+    <FeatureManifest Location="Centenario.Comisiones.Aprobaciones_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

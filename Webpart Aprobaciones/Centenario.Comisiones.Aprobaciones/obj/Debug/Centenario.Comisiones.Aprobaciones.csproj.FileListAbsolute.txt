@@ -1,0 +1,10 @@
+D:\TFS-GYS\CENTENARIO\Entrega\Fuentes\Centenario.Comisiones.Aprobaciones\bin\Debug\Centenario.Comisiones.Aprobaciones.pdb
+D:\TFS-GYS\CENTENARIO\Entrega\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.csproj.AssemblyReference.cache
+D:\TFS-GYS\CENTENARIO\Entrega\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.csproj.CoreCompileInputs.cache
+D:\TFS-GYS\CENTENARIO\Entrega\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.dll
+D:\TFS-GYS\CENTENARIO\Entrega\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.pdb
+C:\Proyectos\CENTENARIO\Fuentes\Fuentes\Centenario.Comisiones.Aprobaciones\bin\Debug\Centenario.Comisiones.Aprobaciones.pdb
+C:\Proyectos\CENTENARIO\Fuentes\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.csproj.AssemblyReference.cache
+C:\Proyectos\CENTENARIO\Fuentes\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.csproj.CoreCompileInputs.cache
+C:\Proyectos\CENTENARIO\Fuentes\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.dll
+C:\Proyectos\CENTENARIO\Fuentes\Fuentes\Centenario.Comisiones.Aprobaciones\obj\Debug\Centenario.Comisiones.Aprobaciones.pdb

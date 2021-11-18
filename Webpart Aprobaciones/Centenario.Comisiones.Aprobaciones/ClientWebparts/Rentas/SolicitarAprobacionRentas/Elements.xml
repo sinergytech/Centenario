@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ClientWebPart Name="SolicitarAprobacionRentas" Title="Rentas - Solicitar Aprobación Comisiones" Description="SolicitarAprobacionRentas Description" DefaultWidth="300" DefaultHeight="200">
+
+    <!-- Content element identifies the location of the page that will render inside the client web part
+         Properties are referenced on the query string using the pattern _propertyName_
+         Example: Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
+    <Content Type="html" Src="~appWebUrl/Pages/SolicitarAprobacionRentas.aspx?{StandardTokens}&amp;IDROL=_IDROL_&amp;IDEJEC=_IDEJEC_&amp;ANIO=_ANIO_&amp;MES=_MES_&amp;TOTCOM=_TOTCOM_&amp;CONCEP=_CONCEP_" />
+
+    <!-- Define properties in the Properties element.
+         Remember to put Property Name on the Src attribute of the Content element above. -->
+    <Properties>
+      <Property Name="IDROL" Type="string" RequiresDesignerPermission="true" DefaultValue="IDROLValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="IDROL">
+      </Property>
+      <Property Name="IDEJEC" Type="string" RequiresDesignerPermission="true" DefaultValue="IDEJECValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="IDEJEC">
+      </Property>
+      <Property Name="ANIO" Type="string" RequiresDesignerPermission="true" DefaultValue="ANIOValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="ANIO">
+      </Property>
+      <Property Name="MES" Type="string" RequiresDesignerPermission="true" DefaultValue="MESValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="MES">
+      </Property>
+      <Property Name="TOTCOM" Type="string" RequiresDesignerPermission="true" DefaultValue="TOTCOMValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="TOTCOM">
+      </Property>
+      <Property Name="CONCEP" Type="string" RequiresDesignerPermission="true" DefaultValue="CONCEPValue"
+                        WebCategory="AppPart Properties"
+                        WebDisplayName="CONCEP">
+      </Property>
+    </Properties>
+
+  </ClientWebPart>
+</Elements>

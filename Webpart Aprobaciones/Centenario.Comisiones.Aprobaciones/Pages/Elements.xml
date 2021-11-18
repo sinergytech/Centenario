@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\SolicitarAprobacionCDU.aspx" Url="Pages/SolicitarAprobacionCDU.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\SolicitarAprobacionRentas.aspx" Url="Pages/SolicitarAprobacionRentas.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\AprobacionCDU.aspx" Url="Pages/AprobacionCDU.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\AprobacionRentas.aspx" Url="Pages/AprobacionRentas.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\SolicitarAprobacionCC.aspx" Url="Pages/SolicitarAprobacionCC.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\AprobacionCC.aspx" Url="Pages/AprobacionCC.aspx" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

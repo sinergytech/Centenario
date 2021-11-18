@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\AlertJS.js" Url="Scripts/Comun/AlertJS.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\app.js" Url="Scripts/Comun/app.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\arrow.fabric.js" Url="Scripts/Comun/arrow.fabric.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\cookie.js" Url="Scripts/Comun/cookie.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\custom-script.js" Url="Scripts/Comun/custom-script.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\custom-script.min.js" Url="Scripts/Comun/custom-script.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\flatpickr.js" Url="Scripts/Comun/flatpickr.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\jquery.mark.js" Url="Scripts/Comun/jquery.mark.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\jquery.mask.js" Url="Scripts/Comun/jquery.mask.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\materialize.js" Url="Scripts/Comun/materialize.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\materialize.min.js" Url="Scripts/Comun/materialize.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\moment.js" Url="Scripts/Comun/moment.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\numeric.js" Url="Scripts/Comun/numeric.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\pdfannotate.js" Url="Scripts/Comun/pdfannotate.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\plugins.js" Url="Scripts/Comun/plugins.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\plugins.min.js" Url="Scripts/Comun/plugins.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\ResizeAppPart.js" Url="Scripts/Comun/ResizeAppPart.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\spcontext.js" Url="Scripts/Comun/spcontext.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\tableExport.js" Url="Scripts/Comun/tableExport.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Comun\Utils.js" Url="Scripts/Comun/Utils.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\SolicitarAprobacionCDU.js" Url="Scripts/Pages/SolicitarAprobacionCDU.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\SPOHelper.js" Url="Scripts/Pages/SPOHelper.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\Utils.js" Url="Scripts/Pages/Utils.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\core.js" Url="Scripts/vendor/core.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\jquery-3.2.1.min.js" Url="Scripts/vendor/jquery-3.2.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\jquery-dateFormat.js" Url="Scripts/vendor/jquery-dateFormat.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\moment.js" Url="Scripts/vendor/moment.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\numeric.js" Url="Scripts/vendor/numeric.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\ResizeAppPart.js" Url="Scripts/vendor/ResizeAppPart.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\bootstrap\bootstrap.bundle.min.js" Url="Scripts/vendor/bootstrap/bootstrap.bundle.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\bootstrap-select\bootstrap-multiselect.css" Url="Scripts/vendor/bootstrap-select/bootstrap-multiselect.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\bootstrap-select\bootstrap-multiselect.js" Url="Scripts/vendor/bootstrap-select/bootstrap-multiselect.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\bootstrap-select\bootstrap-select.css" Url="Scripts/vendor/bootstrap-select/bootstrap-select.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\bootstrap-select\bootstrap-select.js" Url="Scripts/vendor/bootstrap-select/bootstrap-select.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\colorbox\jquery.colorbox-min.js" Url="Scripts/vendor/colorbox/jquery.colorbox-min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\jqueryui\jquery-ui.js" Url="Scripts/vendor/jqueryui/jquery-ui.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\jqueryui\jquery-ui.min.js" Url="Scripts/vendor/jqueryui/jquery-ui.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\vendor\slick\slick.min.js" Url="Scripts/vendor/slick/slick.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\SolicitarAprobacionRentas.js" Url="Scripts/Pages/SolicitarAprobacionRentas.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\AprobacionCDU.js" Url="Scripts/Pages/AprobacionCDU.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\AprobacionRentas.js" Url="Scripts/Pages/AprobacionRentas.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\AprobacionCC.js" Url="Scripts/Pages/AprobacionCC.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Pages\SolicitarAprobacionCC.js" Url="Scripts/Pages/SolicitarAprobacionCC.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

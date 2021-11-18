@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-sharepoint-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "formidable": "^1.2.1",
+    "node-fetch": "^2.3.0",
+    "postman-request": "^2.88.1-postman.5",
+    "promise": "^8.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "sp-rest-proxy": "^3.1.0",
+    "xmldom": "^0.1.27"
+  }
+}

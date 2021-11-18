@@ -5,12 +5,18 @@ export const LISTAS = {
     ROLES: 'Roles',
     EJECUTIVOS_MINKA: 'Ejecutivos Minka',
     EJECUTIVOS_RI: 'Ejecutivos Renta Inmobiliaria',
+    //Desarrollo Urbano
+    EJECUTIVOS_INDUSTRIAL: 'Ejecutivos Industrial',
+    EJECUTIVOS_URBANIZACIONES: 'Ejecutivos Urbanizaciones',
+    EJECUTIVOS_COBRANZAS: 'Ejecutivo - Rol'
     
 };
 
 
 export const SUBSITIOS = {
     Renta: 'rentas',
+    Desarrollo_Urbano: 'du',
+    Cobranzas: 'cobranzas'
 };
 
 export const CONSTANTES = {

@@ -80,7 +80,7 @@ export default {
             }
         })
     }).then(() => {
-        API.getListItems(null, LISTAS.CONFIGURACIONACCESOS, null, null).then( configuracionAccesos => {
+        API.getListItems(null, LISTAS.CONFIGURACIONACCESOS, {SubSitio: CONSTANTES.RENTA_INMOBILIARIA}, null).then( configuracionAccesos => {
             let idUsuario = this.$store.state.currentUser.Id;
             this.ejecutivos = this.ejecutivos.filter(x => x.Ejecutivo.Id == idUsuario);
             let confAccesos =configuracionAccesos.filter(x => x.SubSitio == CONSTANTES.RENTA_INMOBILIARIA);

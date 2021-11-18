@@ -154,13 +154,13 @@ namespace Carga.VentaUrbanizaciones
                                 ventasIndustrial.Anio = columnas[4];
                                 ventasIndustrial.Mes = columnas[5];
 
-                                ventasIndustrial.Area = Convert.ToDecimal(columnas[11]) / 10000;
+                                ventasIndustrial.Area = Convert.ToDecimal(columnas[12]) / 10000;
                                 parametroLote = lstParametrosLote.Find(x => x.AreaDesde < ventasIndustrial.Area && ventasIndustrial.Area <= x.AreaHasta);//  ObtenerParametroLote(Convert.ToDecimal(columnas[12]) / 10000);
 
                                 ventasIndustrial.TipoVenta = parametroLote.TipoVenta;//columnas[5];
                                 ventasIndustrial.TipoLote = parametroLote.TipoLote;// columnas[6];
-                                ventasIndustrial.AnioResolucion = columnas[12];
-                                ventasIndustrial.MesResolucion = columnas[13];
+                                ventasIndustrial.AnioResolucion = columnas[13];
+                                ventasIndustrial.MesResolucion = columnas[14];
 
                                 if (lstejecutivosventaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor).FirstOrDefault() != null)
                                 {
@@ -183,6 +183,11 @@ namespace Carga.VentaUrbanizaciones
                                         ventasIndustrial.RolLookUp = EjecutivoApoyo.RolLookUp;
 
                                     }
+                                    var EjecutivoInd = lstejecutivosventaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor).FirstOrDefault();
+                                    ventasIndustrial.LookUpEjecutivo = EjecutivoInd.LookUpEjecutivo;
+                                    ventasIndustrial.LookUpEjecutivoApoyo = EjecutivoInd.LookUpEjecutivo;
+                                    ventasIndustrial.SupervisorLookUp = EjecutivoInd.SupervisorLookUp;
+                                    ventasIndustrial.RolLookUp = EjecutivoInd.RolLookUp;
 
 
 

@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertCsvCentenario.AccesoDatos", "InsertCsvCentenario.AccesoDatos\InsertCsvCentenario.AccesoDatos.csproj", "{5A37940E-3A94-4E9F-9840-1993FF05EA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertCsvCentanario.Entidades", "InsertCsvCentanario.Entidades\InsertCsvCentanario.Entidades.csproj", "{7DCCDD01-710D-4A76-BABA-D1EF0C276F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carga.Creditos_y_Cobranzas", "Carga.Creditos_y_Cobranzas\Carga.Creditos_y_Cobranzas.csproj", "{FB6D676F-02C9-4522-AF5C-342EB5B86268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carga.VentaUrbanizaciones", "Carga.VentaUrbanizaciones\Carga.VentaUrbanizaciones.csproj", "{C4303755-AACA-40CA-B2BA-25C78729DFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carga.RentaInmobiliaria", "Carga.RentaInmobiliaria\Carga.RentaInmobiliaria.csproj", "{24DE869A-8598-451C-B053-FED3DDCD9F93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A37940E-3A94-4E9F-9840-1993FF05EA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A37940E-3A94-4E9F-9840-1993FF05EA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A37940E-3A94-4E9F-9840-1993FF05EA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A37940E-3A94-4E9F-9840-1993FF05EA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DCCDD01-710D-4A76-BABA-D1EF0C276F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DCCDD01-710D-4A76-BABA-D1EF0C276F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DCCDD01-710D-4A76-BABA-D1EF0C276F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DCCDD01-710D-4A76-BABA-D1EF0C276F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6D676F-02C9-4522-AF5C-342EB5B86268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6D676F-02C9-4522-AF5C-342EB5B86268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6D676F-02C9-4522-AF5C-342EB5B86268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6D676F-02C9-4522-AF5C-342EB5B86268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4303755-AACA-40CA-B2BA-25C78729DFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4303755-AACA-40CA-B2BA-25C78729DFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4303755-AACA-40CA-B2BA-25C78729DFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4303755-AACA-40CA-B2BA-25C78729DFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DE869A-8598-451C-B053-FED3DDCD9F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DE869A-8598-451C-B053-FED3DDCD9F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DE869A-8598-451C-B053-FED3DDCD9F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DE869A-8598-451C-B053-FED3DDCD9F93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C738CEF-BD72-4DBB-8BAA-FB8A79018772}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/gysperu
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = InsertCsvCentenario.AccesoDatos\\InsertCsvCentenario.AccesoDatos.csproj
+		SccProjectName1 = InsertCsvCentenario.AccesoDatos
+		SccLocalPath1 = InsertCsvCentenario.AccesoDatos
+		SccProjectUniqueName2 = InsertCsvCentanario.Entidades\\InsertCsvCentanario.Entidades.csproj
+		SccProjectName2 = InsertCsvCentanario.Entidades
+		SccLocalPath2 = InsertCsvCentanario.Entidades
+		SccProjectUniqueName3 = Carga.Creditos_y_Cobranzas\\Carga.Creditos_y_Cobranzas.csproj
+		SccProjectName3 = Carga.Creditos_y_Cobranzas
+		SccLocalPath3 = Carga.Creditos_y_Cobranzas
+		SccProjectUniqueName4 = Carga.VentaUrbanizaciones\\Carga.VentaUrbanizaciones.csproj
+		SccProjectName4 = Carga.VentaUrbanizaciones
+		SccLocalPath4 = Carga.VentaUrbanizaciones
+		SccProjectUniqueName5 = Carga.RentaInmobiliaria\\Carga.RentaInmobiliaria.csproj
+		SccProjectName5 = Carga.RentaInmobiliaria
+		SccLocalPath5 = Carga.RentaInmobiliaria
+	EndGlobalSection
+EndGlobal

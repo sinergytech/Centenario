@@ -26,6 +26,8 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_Rol = "RolAsesor";
         public const string SP_AnioResolucion = "AnioResolucion";
         public const string SP_MesResolucion = "MesResolucion";
+        public const string SP_Anio_Arras = "AnioArras";
+        public const string SP_Mes_Arras = "MesArras";
 
 
         public  string V000414 = "V000414";
@@ -54,6 +56,8 @@ namespace InsertCsvCentanario.Entidades
         public SP.FieldLookupValue RolLookUp { get; set; }
         public string AnioResolucion { set; get; }
         public string MesResolucion { set; get; }
+        public string AnioArras { set; get; }
+        public string MesArras { set; get; }
 
 
     }

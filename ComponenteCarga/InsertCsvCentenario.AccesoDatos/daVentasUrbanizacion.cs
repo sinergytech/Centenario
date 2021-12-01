@@ -326,7 +326,9 @@ namespace InsertCsvCentenario.AccesoDatos
                 RegistroLista[enVentasUrbanizacion.SP_Rol] = VentasUrba.RolLookUp;
                 RegistroLista[enVentasUrbanizacion.SP_Anio_Reso] = VentasUrba.AnioResolucion;
                 RegistroLista[enVentasUrbanizacion.SP_Mes_Reso] = VentasUrba.MesResolucion;
-       
+                RegistroLista[enVentasUrbanizacion.SP_Anio_Arras] = VentasUrba.AnioArras;
+                RegistroLista[enVentasUrbanizacion.SP_Mes_Arras] = VentasUrba.MesArras;
+
 
                 RegistroLista.Update();
                 contexto.ExecuteQuery();

@@ -27,8 +27,10 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_Rol = "RolAsesor";
         public const string SP_Anio_Reso = "AnioResolucion";
         public const string SP_Mes_Reso = "MesResolucion";
+        public const string SP_Anio_Arras = "AnioArras";
+        public const string SP_Mes_Arras = "MesArras";
 
-       
+
         //Atributos de la clase
         public string Zona { set; get; }
         public string Ejecutivo { set; get; }
@@ -50,5 +52,7 @@ namespace InsertCsvCentanario.Entidades
         public SP.FieldUserValue LookUpEjecutivoApoyo { set; get; }
         public string AnioResolucion { set; get; }
         public string MesResolucion { set; get; }
+        public string AnioArras { set; get; }
+        public string MesArras { set; get; }
     }
 }

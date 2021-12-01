@@ -34,6 +34,8 @@ namespace InsertCsvCentenario.AccesoDatos
                 RegistroLista[enVentasIndustrial.SP_Rol] = VenIndus.RolLookUp;
                 RegistroLista[enVentasIndustrial.SP_AnioResolucion] = VenIndus.AnioResolucion;
                 RegistroLista[enVentasIndustrial.SP_MesResolucion] = VenIndus.MesResolucion;
+                RegistroLista[enVentasIndustrial.SP_Anio_Arras] = VenIndus.AnioArras;
+                RegistroLista[enVentasIndustrial.SP_Mes_Arras] = VenIndus.MesArras;
 
                 RegistroLista.Update();
                 contexto.ExecuteQuery();

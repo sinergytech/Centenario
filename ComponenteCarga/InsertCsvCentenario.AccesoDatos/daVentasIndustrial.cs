@@ -36,6 +36,9 @@ namespace InsertCsvCentenario.AccesoDatos
                 RegistroLista[enVentasIndustrial.SP_MesResolucion] = VenIndus.MesResolucion;
                 RegistroLista[enVentasIndustrial.SP_Anio_Arras] = VenIndus.AnioArras;
                 RegistroLista[enVentasIndustrial.SP_Mes_Arras] = VenIndus.MesArras;
+                RegistroLista[enVentasIndustrial.SP_NroFinanciamiento] = VenIndus.NroFinanciamiento;
+                RegistroLista[enVentasIndustrial.SP_SupervisorAsignado] = VenIndus.SupervisorAsignado;
+                RegistroLista[enVentasIndustrial.SP_SupervisorVenta] = VenIndus.SupervisorVenta;
 
                 RegistroLista.Update();
                 contexto.ExecuteQuery();
@@ -147,7 +150,20 @@ namespace InsertCsvCentenario.AccesoDatos
                         <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Ejecutivo + "'/>  <Value Type='Text'>" + VentasIndu.LookUpEjecutivo.LookupValue + @"</Value> </Eq>
                            <And>
                                     <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Anio + "'/>  <Value Type='Number'>" + VentasIndu.Anio + @"</Value> </Eq>
-                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Mes + "'/>  <Value Type='Number'>" + VentasIndu.Mes + @"</Value> </Eq>
+                                    <And>
+                                            <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Mes + "'/>  <Value Type='Number'>" + VentasIndu.Mes + @"</Value> </Eq>
+                                            <And>
+                                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoLote + "'/>  <Value Type='Text'>" + VentasIndu.TipoLote + @"</Value> </Eq>
+                                                    <And>
+                                                       <Eq>
+                                                          <FieldRef Name='NumeroFinanciamiento' />
+                                                          <Value Type='Number'>" + VentasIndu.NroFinanciamiento + @"</Value>
+                                                       </Eq>
+                                                       <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VentasIndu.TipoVenta + @"</Value> </Eq>
+                                                    </And>
+                                                    
+                                           </And>
+                                   </And> 
                            </And> 
                     </And> 
                        </Where>
@@ -203,7 +219,14 @@ namespace InsertCsvCentenario.AccesoDatos
                                             <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Mes + "'/>  <Value Type='Number'>" + VenIndus.Mes + @"</Value> </Eq>
                                             <And>
                                                     <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoLote + "'/>  <Value Type='Text'>" + VenIndus.TipoLote + @"</Value> </Eq>
-                                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VenIndus.TipoVenta + @"</Value> </Eq>
+                                                    <And>
+                                                       <Eq>
+                                                          <FieldRef Name='NumeroFinanciamiento' />
+                                                          <Value Type='Number'>" + VenIndus.NroFinanciamiento + @"</Value>
+                                                       </Eq>
+                                                       <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VenIndus.TipoVenta + @"</Value> </Eq>
+                                                    </And>
+                                                    
                                            </And>
                                    </And> 
                            </And> 

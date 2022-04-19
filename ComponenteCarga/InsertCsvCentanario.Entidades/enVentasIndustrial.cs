@@ -28,6 +28,9 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_MesResolucion = "MesResolucion";
         public const string SP_Anio_Arras = "AnioArras";
         public const string SP_Mes_Arras = "MesArras";
+        public const string SP_NroFinanciamiento = "NumeroFinanciamiento";
+        public const string SP_SupervisorAsignado = "SupervisorAsignado";
+        public const string SP_SupervisorVenta = "SupervisorVenta";
 
 
         public  string V000414 = "V000414";
@@ -58,7 +61,9 @@ namespace InsertCsvCentanario.Entidades
         public string MesResolucion { set; get; }
         public string AnioArras { set; get; }
         public string MesArras { set; get; }
-
-
+        public string NroFinanciamiento { set; get; }
+        public string SupervisorAsignado { set; get; }
+        public string SupervisorVenta { set; get; }
+        
     }
 }

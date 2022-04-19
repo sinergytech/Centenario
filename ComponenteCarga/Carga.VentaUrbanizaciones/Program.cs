@@ -73,6 +73,9 @@ namespace Carga.VentaUrbanizaciones
                                 VentaUrba.MesResolucion = columnas[12];
                                 VentaUrba.AnioArras = columnas[13];
                                 VentaUrba.MesArras = columnas[14];
+                                VentaUrba.NroFinanciamiento = columnas[15];
+                                VentaUrba.SupervisorAsignado = columnas[16];
+                                VentaUrba.SupervisorVenta = columnas[17];
                                 if (lstProyectos.Exists(x => x.Codigo == VentaUrba.CodigoProyecto))
                                 {
                                     VentaUrba.IdProyecto = lstProyectos.Find(x => x.Codigo == VentaUrba.CodigoProyecto).Id;
@@ -165,6 +168,7 @@ namespace Carga.VentaUrbanizaciones
                                 ventasIndustrial.MesResolucion = columnas[14];
                                 ventasIndustrial.AnioArras = columnas[15];
                                 ventasIndustrial.MesArras = columnas[16];
+                                ventasIndustrial.NroFinanciamiento = columnas[17];
 
                                 if (lstejecutivosventaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor).FirstOrDefault() != null)
                                 {

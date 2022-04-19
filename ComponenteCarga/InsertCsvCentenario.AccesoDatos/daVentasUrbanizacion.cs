@@ -194,10 +194,16 @@ namespace InsertCsvCentenario.AccesoDatos
                                       <FieldRef Name='Mes' />
                                       <Value Type='Number'>" + VentUrb.Mes + @"</Value>
                                    </Eq>
-                                   <Eq>
-                                      <FieldRef Name='Proyecto' LookupId='TRUE' />
-                                      <Value Type='Lookup'>" + VentUrb.IdProyecto + @"</Value>
-                                   </Eq>
+                                    <And>
+                                       <Eq>
+                                          <FieldRef Name='NumeroFinanciamiento' />
+                                          <Value Type='Number'>" + VentUrb.NroFinanciamiento + @"</Value>
+                                       </Eq>
+                                       <Eq>
+                                          <FieldRef Name='Proyecto' LookupId='TRUE' />
+                                          <Value Type='Lookup'>" + VentUrb.IdProyecto + @"</Value>
+                                       </Eq>
+                                    </And>
                                 </And>
                              </And>
                           </And>
@@ -328,6 +334,9 @@ namespace InsertCsvCentenario.AccesoDatos
                 RegistroLista[enVentasUrbanizacion.SP_Mes_Reso] = VentasUrba.MesResolucion;
                 RegistroLista[enVentasUrbanizacion.SP_Anio_Arras] = VentasUrba.AnioArras;
                 RegistroLista[enVentasUrbanizacion.SP_Mes_Arras] = VentasUrba.MesArras;
+                RegistroLista[enVentasUrbanizacion.SP_NroFinanciamiento] = VentasUrba.NroFinanciamiento;
+                RegistroLista[enVentasUrbanizacion.SP_SupervisorAsignado] = VentasUrba.SupervisorAsignado;
+                RegistroLista[enVentasUrbanizacion.SP_SupervisorVenta] = VentasUrba.SupervisorVenta;
 
 
                 RegistroLista.Update();
@@ -370,10 +379,16 @@ namespace InsertCsvCentenario.AccesoDatos
                                       <FieldRef Name='Mes' />
                                       <Value Type='Number'>" + Venturb.Mes + @"</Value>
                                    </Eq>
-                                   <Eq>
-                                      <FieldRef Name='Proyecto' LookupId='TRUE' />
-                                      <Value Type='Lookup'>" + Venturb.IdProyecto + @"</Value>
-                                   </Eq>
+                                    <And>
+                                       <Eq>
+                                          <FieldRef Name='NumeroFinanciamiento' />
+                                          <Value Type='Number'>" + Venturb.NroFinanciamiento + @"</Value>
+                                       </Eq>
+                                       <Eq>
+                                          <FieldRef Name='Proyecto' LookupId='TRUE' />
+                                          <Value Type='Lookup'>" + Venturb.IdProyecto + @"</Value>
+                                       </Eq>
+                                    </And>
                                 </And>
                              </And>
                           </And>

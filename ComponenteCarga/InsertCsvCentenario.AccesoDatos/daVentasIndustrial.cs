@@ -39,6 +39,8 @@ namespace InsertCsvCentenario.AccesoDatos
                 RegistroLista[enVentasIndustrial.SP_NroFinanciamiento] = VenIndus.NroFinanciamiento;
                 RegistroLista[enVentasIndustrial.SP_SupervisorAsignado] = VenIndus.SupervisorAsignado;
                 RegistroLista[enVentasIndustrial.SP_SupervisorVenta] = VenIndus.SupervisorVenta;
+                RegistroLista[enVentasIndustrial.SP_NumeroDeudor] = VenIndus.NumeroDeudor;
+                RegistroLista[enVentasIndustrial.SP_DatosCliente] = VenIndus.DatosCliente;
 
                 RegistroLista.Update();
                 contexto.ExecuteQuery();

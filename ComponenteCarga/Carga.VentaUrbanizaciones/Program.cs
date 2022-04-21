@@ -96,7 +96,7 @@ namespace Carga.VentaUrbanizaciones
 
 
                                     var venta = lstVenta.Where(a => a.CodigoAsesor == VentaUrba.CodigoAsesor && a.Mes == VentaUrba.Mes && a.Anio == VentaUrba.Anio
-                                    && a.CodigoProyecto == VentaUrba.CodigoProyecto).ToList();
+                                    && a.CodigoProyecto == VentaUrba.CodigoProyecto && a.NroFinanciamiento == VentaUrba.NroFinanciamiento).ToList();
                                     if (venta.Count == 0)
                                     {
                                         lstVenta.Add(VentaUrba);
@@ -106,7 +106,7 @@ namespace Carga.VentaUrbanizaciones
                                         decimal Ventatotal = venta[0].Venta;
                                         Ventatotal = Ventatotal + VentaUrba.Venta;
                                         lstVenta.First(a => a.CodigoAsesor == VentaUrba.CodigoAsesor && a.Mes == VentaUrba.Mes && a.Anio == VentaUrba.Anio
-                                        && a.CodigoProyecto == VentaUrba.CodigoProyecto).Venta = Convert.ToDecimal(Ventatotal, new CultureInfo("en-ES"));
+                                        && a.CodigoProyecto == VentaUrba.CodigoProyecto && a.NroFinanciamiento == VentaUrba.NroFinanciamiento).Venta = Convert.ToDecimal(Ventatotal, new CultureInfo("en-ES"));
                                     }
                                 }
 
@@ -169,6 +169,8 @@ namespace Carga.VentaUrbanizaciones
                                 ventasIndustrial.AnioArras = columnas[15];
                                 ventasIndustrial.MesArras = columnas[16];
                                 ventasIndustrial.NroFinanciamiento = columnas[17];
+                                ventasIndustrial.NumeroDeudor = columnas[18];
+                                ventasIndustrial.DatosCliente = columnas[19];
 
                                 if (lstejecutivosventaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor).FirstOrDefault() != null)
                                 {
@@ -199,7 +201,7 @@ namespace Carga.VentaUrbanizaciones
 
 
 
-                                    var venta = lstVentaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor && a.Mes == ventasIndustrial.Mes && a.Anio == ventasIndustrial.Anio && a.TipoVenta == ventasIndustrial.TipoVenta && a.TipoLote == ventasIndustrial.TipoLote).ToList();
+                                    var venta = lstVentaIndustrial.Where(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor && a.Mes == ventasIndustrial.Mes && a.Anio == ventasIndustrial.Anio && a.TipoVenta == ventasIndustrial.TipoVenta && a.TipoLote == ventasIndustrial.TipoLote && a.NroFinanciamiento == ventasIndustrial.NroFinanciamiento).ToList();
                                     if (venta.Count == 0)
                                     {
                                         lstVentaIndustrial.Add(ventasIndustrial);
@@ -208,7 +210,7 @@ namespace Carga.VentaUrbanizaciones
                                     {
                                         decimal Ventatotal = venta[0].Venta;
                                         Ventatotal = Ventatotal + ventasIndustrial.Venta;
-                                        lstVentaIndustrial.First(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor && a.Mes == ventasIndustrial.Mes && a.Anio == ventasIndustrial.Anio && a.TipoVenta == ventasIndustrial.TipoVenta && a.TipoLote == ventasIndustrial.TipoLote).Venta = Convert.ToDecimal(Ventatotal, new CultureInfo("en-ES"));
+                                        lstVentaIndustrial.First(a => a.CodigoAsesor == ventasIndustrial.CodigoAsesor && a.Mes == ventasIndustrial.Mes && a.Anio == ventasIndustrial.Anio && a.TipoVenta == ventasIndustrial.TipoVenta && a.TipoLote == ventasIndustrial.TipoLote && a.NroFinanciamiento == ventasIndustrial.NroFinanciamiento).Venta = Convert.ToDecimal(Ventatotal, new CultureInfo("en-ES"));
                                     }
                                 }
 

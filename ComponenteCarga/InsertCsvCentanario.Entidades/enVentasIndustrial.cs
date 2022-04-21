@@ -31,6 +31,8 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_NroFinanciamiento = "NumeroFinanciamiento";
         public const string SP_SupervisorAsignado = "SupervisorAsignado";
         public const string SP_SupervisorVenta = "SupervisorVenta";
+        public const string SP_NumeroDeudor = "NumeroDeudor";
+        public const string SP_DatosCliente = "DatosCliente";
 
 
         public  string V000414 = "V000414";
@@ -64,6 +66,8 @@ namespace InsertCsvCentanario.Entidades
         public string NroFinanciamiento { set; get; }
         public string SupervisorAsignado { set; get; }
         public string SupervisorVenta { set; get; }
+        public string NumeroDeudor { set; get; }
+        public string DatosCliente { set; get; }
         
     }
 }

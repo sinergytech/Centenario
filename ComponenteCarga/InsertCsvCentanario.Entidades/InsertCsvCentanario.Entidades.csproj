@@ -103,6 +103,7 @@
     <Compile Include="enVentasIndustrial.cs" />
     <Compile Include="enZonasUrbanizacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

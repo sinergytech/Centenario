@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SP = Microsoft.SharePoint.Client;
+using util = InsertCsvCentanario.Entidades.Object;
 
 namespace Carga.VentaUrbanizaciones
 {
@@ -115,6 +116,15 @@ namespace Carga.VentaUrbanizaciones
                             }
 
                         }
+                        var lst = lstVenta.GroupBy(x => new { x.Anio, x.Mes }).Select(x => new enVentasUrbanizacion { Mes = x.Key.Mes, Anio = x.Key.Anio }).ToList();
+                        Console.WriteLine("Cantidad Agrupados a eliminar: " + lst.Count);
+                        if (lst.Count > 0)
+                        {
+                            Console.WriteLine("Eliminando registros...");
+                            new daVentasUrbanizacion().EliminarAnioMesUrbanizacion(lst, contexto);
+                        }
+                        
+                        
 
                         ProcesarDataIndustrial_O_Urbanizacion(lstVenta, TipoArchivo, contexto);
 
@@ -220,7 +230,13 @@ namespace Carga.VentaUrbanizaciones
 
                         }
 
-
+                        var lst = lstVentaIndustrial.GroupBy(x => new { x.Anio, x.Mes }).Select(x => new enVentasIndustrial { Mes = x.Key.Mes, Anio = x.Key.Anio }).ToList();
+                        Console.WriteLine("Cantidad Agrupados a eliminar: " + lst.Count);
+                        if(lst.Count > 0)
+                        {
+                            Console.WriteLine("Eliminando registros...");
+                            new daVentaIndusrial().EliminarAnioMesIndustrial(lst, contexto);
+                        }
                     }
 
                     catch (Exception ex)
@@ -249,22 +265,32 @@ namespace Carga.VentaUrbanizaciones
 
                 if (TipoArchivo.Equals(Utils.URBANIZACION))
                 {
-
-                    foreach (var VentaUrba in lstVenta)
+                    var ventaGroups = util.ChunkBy(lstVenta, 100);
+                    ventaGroups.ForEach(lstTemp =>
                     {
-                        var Item = (enVentasUrbanizacion)VentaUrba;
-                        bool ValidarPeriodoVentaExistente = new daVentasUrbanizacion().ValidarExisteVentaUrbanizacion(Item, contexto);
-
-                        if (ValidarPeriodoVentaExistente)
+                        var lst = Task.Run(() =>
                         {
-                            Console.WriteLine(new daVentasUrbanizacion().InsertarVentaUrbanizacion(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
-                        }
-                        else
-                        {
-                            Console.WriteLine(new daVentasUrbanizacion().ActualizarVentaUrbanización(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
-                        }
+                            foreach (var VentaUrba in lstTemp)
+                            {
+                                var Item = (enVentasUrbanizacion)VentaUrba;
+                                bool ValidarPeriodoVentaExistente = new daVentasUrbanizacion().ValidarExisteVentaUrbanizacion(Item, contexto);
 
-                    }
+                                if (ValidarPeriodoVentaExistente)
+                                {
+                                    Console.WriteLine(new daVentasUrbanizacion().InsertarVentaUrbanizacion(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
+                                }
+                                else
+                                {
+                                    Console.WriteLine(new daVentasUrbanizacion().ReIngresarVentaUrbanización(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
+                                }
+
+                            }
+                        });
+                        Task.WaitAll(lst);
+
+                    });
+
+                    
 
 
                 }
@@ -287,20 +313,30 @@ namespace Carga.VentaUrbanizaciones
             {
                 if (TipoArchivo.Equals(Utils.INDUSTRIAL))
                 {
-                    foreach (var VentaUrba in lstVenta)
+                    var ventaGroups = util.ChunkBy(lstVenta, 100);
+                    ventaGroups.ForEach(lstTemp =>
                     {
-                        var Item = (enVentasIndustrial)VentaUrba;
-                        bool ValidarPeriodoVentaExistente = new daVentaIndusrial().ValidarExisteEjecutivoIndustrial(Item, contexto);
+                        var lst = Task.Run(() =>
+                        {
+                            foreach (var VentaUrba in lstTemp)
+                            {
+                                var Item = (enVentasIndustrial)VentaUrba;
+                                bool ValidarPeriodoVentaExistente = new daVentaIndusrial().ValidarExisteEjecutivoIndustrial(Item, contexto);
 
-                        if (ValidarPeriodoVentaExistente)
-                        {
-                            Console.WriteLine(new daVentaIndusrial().InsertarRegistro(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
-                        }
-                        else
-                        {
-                            Console.WriteLine(new daVentaIndusrial().ActualizarEjecitivoAnioMes(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
-                        }
-                    }
+                                if (ValidarPeriodoVentaExistente)
+                                {
+                                    Console.WriteLine(new daVentaIndusrial().InsertarRegistro(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
+                                }
+                                else
+                                {
+                                    Console.WriteLine(new daVentaIndusrial().ReIngresarEjecitivoAnioMes(Item, contexto) + "\n ----------------------------------- \n ----------------------------------- ");
+                                }
+                            }
+                        });
+                        Task.WaitAll(lst);
+
+                    });
+                    
                 }
             }
             catch (Exception ex)

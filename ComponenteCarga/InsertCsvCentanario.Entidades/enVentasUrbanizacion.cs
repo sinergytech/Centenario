@@ -32,6 +32,7 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_NroFinanciamiento = "NumeroFinanciamiento";
         public const string SP_SupervisorAsignado = "SupervisorAsignado";
         public const string SP_SupervisorVenta = "SupervisorVenta";
+        public const string SP_Activo = "Activo";
 
 
         //Atributos de la clase
@@ -60,5 +61,13 @@ namespace InsertCsvCentanario.Entidades
         public string NroFinanciamiento { set; get; }
         public string SupervisorAsignado { set; get; }
         public string SupervisorVenta { set; get; }
+    }
+
+    public class VentaUrbanizacionDinamicaBE
+    {
+        public string SPColumn { get; set; }
+        public string SPType { get; set; }
+        public bool EsLookup { get; set; }
+        public string Valor { get; set; }
     }
 }

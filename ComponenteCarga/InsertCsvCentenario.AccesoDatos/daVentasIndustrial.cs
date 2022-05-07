@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SP = Microsoft.SharePoint.Client;
 using InsertCsvCentanario.Entidades;
 using System.Globalization;
+using util = InsertCsvCentanario.Entidades.Object;
 
 namespace InsertCsvCentenario.AccesoDatos
 {
@@ -161,7 +162,13 @@ namespace InsertCsvCentenario.AccesoDatos
                                                           <FieldRef Name='NumeroFinanciamiento' />
                                                           <Value Type='Number'>" + VentasIndu.NroFinanciamiento + @"</Value>
                                                        </Eq>
-                                                       <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VentasIndu.TipoVenta + @"</Value> </Eq>
+                                                       <And>
+                                                        <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VentasIndu.TipoVenta + @"</Value> </Eq>
+                                                        <Eq>
+                                                            <FieldRef Name='Activo' />
+                                                            <Value Type='Boolean'>1</Value>
+                                                        </Eq>
+                                                    </And>
                                                     </And>
                                                     
                                            </And>
@@ -202,8 +209,150 @@ namespace InsertCsvCentenario.AccesoDatos
 
         }
 
+        public string ReIngresarEjecitivoAnioMes(enVentasIndustrial VentasIndu, SP.ClientContext contexto)
+        {
+            string Rpta = string.Empty;
+            try
+            {
+                SP.CamlQuery query = new SP.CamlQuery();
+
+                query.ViewXml = @"<View>
+                       <Query>
+                        <Where>           
+                    <And>
+                        <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Ejecutivo + "'/>  <Value Type='Text'>" + VentasIndu.LookUpEjecutivo.LookupValue + @"</Value> </Eq>
+                           <And>
+                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Anio + "'/>  <Value Type='Number'>" + VentasIndu.Anio + @"</Value> </Eq>
+                                    <And>
+                                            <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Mes + "'/>  <Value Type='Number'>" + VentasIndu.Mes + @"</Value> </Eq>
+                                            <And>
+                                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoLote + "'/>  <Value Type='Text'>" + VentasIndu.TipoLote + @"</Value> </Eq>
+                                                    <And>
+                                                       <Eq>
+                                                          <FieldRef Name='NumeroFinanciamiento' />
+                                                          <Value Type='Number'>" + VentasIndu.NroFinanciamiento + @"</Value>
+                                                       </Eq>
+                                                       <And>
+                                                        <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VentasIndu.TipoVenta + @"</Value> </Eq>
+                                                        <Eq>
+                                                            <FieldRef Name='Activo' />
+                                                            <Value Type='Boolean'>1</Value>
+                                                        </Eq>
+                                                    </And>
+                                                    </And>
+                                                    
+                                           </And>
+                                   </And> 
+                           </And> 
+                    </And> 
+                       </Where>
+                      </Query>
+                     </View>";
+
+
+                SP.List oList = contexto.Web.Lists.GetByTitle(enVentasIndustrial.NombreListaSP);
+                SP.ListItemCollection registros = oList.GetItems(query);
+
+                contexto.Load(registros);
+                contexto.ExecuteQuery();
+
+                if (registros.Count > 0)
+                {
+                    SP.ListItem item = registros.FirstOrDefault();
+                    item[enVentasIndustrial.SP_Activo] = false;
+                    item.Update();
+
+                    SP.ListItemCreationInformation InformacionDeLaLista = new SP.ListItemCreationInformation();
+                    SP.ListItem RegistroLista = oList.AddItem(InformacionDeLaLista);
+                    RegistroLista[enVentasIndustrial.SP_Zona] = VentasIndu.Zona;
+                    RegistroLista[enVentasIndustrial.SP_Ejecutivo] = VentasIndu.LookUpEjecutivo;
+                    RegistroLista[enVentasIndustrial.SP_VentaTotal] = VentasIndu.Venta;
+                    RegistroLista[enVentasIndustrial.SP_Anio] = VentasIndu.Anio;
+                    RegistroLista[enVentasIndustrial.SP_Mes] = VentasIndu.Mes;
+                    RegistroLista[enVentasIndustrial.SP_TipoVenta] = VentasIndu.TipoVenta;
+                    RegistroLista[enVentasIndustrial.SP_EjecutivoApoyo] = VentasIndu.LookUpEjecutivoApoyo;
+                    RegistroLista[enVentasIndustrial.SP_Supervisor] = VentasIndu.SupervisorLookUp;
+                    RegistroLista[enVentasIndustrial.SP_TipoLote] = VentasIndu.TipoLote;
+                    RegistroLista[enVentasIndustrial.SP_Area] = VentasIndu.Area;
+                    RegistroLista[enVentasIndustrial.SP_Rol] = VentasIndu.RolLookUp;
+                    RegistroLista[enVentasIndustrial.SP_AnioResolucion] = VentasIndu.AnioResolucion;
+                    RegistroLista[enVentasIndustrial.SP_MesResolucion] = VentasIndu.MesResolucion;
+                    RegistroLista[enVentasIndustrial.SP_Anio_Arras] = VentasIndu.AnioArras;
+                    RegistroLista[enVentasIndustrial.SP_Mes_Arras] = VentasIndu.MesArras;
+                    RegistroLista[enVentasIndustrial.SP_NroFinanciamiento] = VentasIndu.NroFinanciamiento;
+                    RegistroLista[enVentasIndustrial.SP_SupervisorAsignado] = VentasIndu.SupervisorAsignado;
+                    RegistroLista[enVentasIndustrial.SP_SupervisorVenta] = VentasIndu.SupervisorVenta;
+                    RegistroLista[enVentasIndustrial.SP_NumeroDeudor] = VentasIndu.NumeroDeudor;
+                    RegistroLista[enVentasIndustrial.SP_DatosCliente] = VentasIndu.DatosCliente;
+                    RegistroLista[enVentasIndustrial.SP_Activo] = true;
+
+                    RegistroLista.Update();
+                    contexto.ExecuteQuery();
+
+                    Rpta = "Venta industrial: " + VentasIndu.LookUpEjecutivo.LookupValue + " eliminada y registrada";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Rpta = "Error fue :" + ex.Message;
+            }
+
+            return Rpta;
+
+        }
+
+
+
 
         #region Version2
+
+        public SP.ListItemCollection GetAllIndustrial(enVentasIndustrial VenIndus, SP.ClientContext contexto)
+        {
+            // SP.ClientContext contexto = Contexto;
+
+            SP.CamlQuery query = new SP.CamlQuery();
+
+            query.ViewXml = @"<View Scope=='RecursiveAll'>
+                       <Query>
+                        <Where> 
+                            <And>
+                                <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Ejecutivo + "'/>  <Value Type='Text'>" + VenIndus.LookUpEjecutivo.LookupValue + @"</Value> </Eq>
+                                <And>
+                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Anio + "'/>  <Value Type='Number'>" + VenIndus.Anio + @"</Value> </Eq>
+                                    <And>
+                                        <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_Mes + "'/>  <Value Type='Number'>" + VenIndus.Mes + @"</Value> </Eq>
+                                        <And>
+                                            <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoLote + "'/>  <Value Type='Text'>" + VenIndus.TipoLote + @"</Value> </Eq>
+                                            <And>
+                                                <Eq>
+                                                    <FieldRef Name='NumeroFinanciamiento' />
+                                                    <Value Type='Number'>" + VenIndus.NroFinanciamiento + @"</Value>
+                                                </Eq>
+                                                <And>
+                                                    <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VenIndus.TipoVenta + @"</Value> </Eq>
+                                                    <Eq>
+                                                        <FieldRef Name='Activo' />
+                                                        <Value Type='Boolean'>1</Value>
+                                                    </Eq>
+                                                </And>
+                                            </And>
+                                        </And>
+                                   </And> 
+                                </And> 
+                            </And>
+                       </Where>
+                       <RowLimit>5000</RowLimit>
+                      </Query>
+                     </View>";
+
+            SP.List oList = contexto.Web.Lists.GetByTitle(enVentasIndustrial.NombreListaSP);
+            SP.ListItemCollection registros = oList.GetItems(query);
+
+            contexto.Load(registros);
+            contexto.ExecuteQuery();
+            return registros;
+        }
 
 
         public bool ValidarExisteEjecutivoIndustrial(enVentasIndustrial VenIndus, SP.ClientContext contexto)
@@ -226,7 +375,13 @@ namespace InsertCsvCentenario.AccesoDatos
                                                           <FieldRef Name='NumeroFinanciamiento' />
                                                           <Value Type='Number'>" + VenIndus.NroFinanciamiento + @"</Value>
                                                        </Eq>
-                                                       <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VenIndus.TipoVenta + @"</Value> </Eq>
+                                                       <And>
+                                                            <Eq> @<FieldRef Name='" + enVentasIndustrial.SP_TipoVenta + "'/>  <Value Type='Text'>" + VenIndus.TipoVenta + @"</Value> </Eq>
+                                                            <Eq>
+                                                                <FieldRef Name='Activo' />
+                                                                <Value Type='Boolean'>1</Value>
+                                                            </Eq>
+                                                        </And>
                                                     </And>
                                                     
                                            </And>
@@ -309,6 +464,77 @@ namespace InsertCsvCentenario.AccesoDatos
 
             return lstEjecutivoIndustrial;
         }
+        public string EliminarAnioMesIndustrial(List<enVentasIndustrial> VentInd, SP.ClientContext contexto)
+        {
+            SP.CamlQuery query = new SP.CamlQuery();
+
+            query.ViewXml = QueryGetbyAnioMes(VentInd);
+
+            SP.List oList = contexto.Web.Lists.GetByTitle(enVentasIndustrial.NombreListaSP);
+            SP.ListItemCollection registros = oList.GetItems(query);
+            contexto.Load(registros);
+            contexto.ExecuteQuery();
+
+            var lstRe = registros.ToList();
+
+            var ventaGroups = util.ChunkBy(lstRe, 100);
+            ventaGroups.ForEach(lstRegistro =>
+            {
+                var lst = Task.Run(() =>
+                {
+                    foreach (SP.ListItem item in lstRegistro)
+                    {
+                        SP.ListItem itemTemp = item;
+                        itemTemp[enVentasIndustrial.SP_Activo] = false;
+                        itemTemp.Update();
+                    }
+                    contexto.ExecuteQuery();
+                });
+                Task.WaitAll(lst);
+
+            });
+
+            return "Registros inhabilitados: " + registros.Count;
+        }
+
+        public static string QueryGetbyAnioMes(List<enVentasIndustrial> VentInd)
+        {
+            return ($@"
+                    <View Scope='RecursiveAll'>
+                        <Query>
+                            <Where>
+                                { BuildQueryGetAnioMes(VentInd) }
+                            </Where>
+                        </Query>
+                        <RowLimit>5000</RowLimit>
+                    </View>
+                    ");
+        }
+
+
+
+        private static string BuildQueryGetAnioMes(List<enVentasIndustrial> proyectoIds, int? proyectoIdx = 0)
+        {
+            if (proyectoIds == null || proyectoIds?.Count == 0)
+                return "";
+
+            var currentId = proyectoIds[proyectoIdx.Value];
+
+            string Eq_Id = $@"<And>
+                                <Eq><FieldRef Name='Anio' /><Value Type='Number'>{currentId.Anio}</Value></Eq>
+                                <Eq><FieldRef Name='Mes' /><Value Type='Number'>{currentId.Mes}</Value></Eq>
+                            </And>";
+
+
+            if (proyectoIdx == proyectoIds.Count - 1)
+                return Eq_Id;
+
+            var query = $"<Or>{Eq_Id} {BuildQueryGetAnioMes(proyectoIds, proyectoIdx + 1)}</Or>";
+
+            return query;
+
+        }
+
 
         #endregion
 

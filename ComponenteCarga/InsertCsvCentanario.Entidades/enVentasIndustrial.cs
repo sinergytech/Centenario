@@ -33,6 +33,7 @@ namespace InsertCsvCentanario.Entidades
         public const string SP_SupervisorVenta = "SupervisorVenta";
         public const string SP_NumeroDeudor = "NumeroDeudor";
         public const string SP_DatosCliente = "DatosCliente";
+        public const string SP_Activo = "Activo";
 
 
         public  string V000414 = "V000414";
